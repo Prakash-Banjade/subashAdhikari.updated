@@ -1,0 +1,264 @@
+html {
+    font-size: 13px;
+}
+
+nav {
+    border-bottom: 1px solid black;
+    gap: 0;
+    padding: 10px 0;
+    height: 50px;
+}
+
+#goTop .goTop::before {
+    top: -53%;
+}
+
+section#logo {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+section#tabs ul {
+    flex-flow: column wrap;
+    gap: 2rem;
+    width: 100vw;
+    padding: 15px 0 15px 0;
+    background-color: rgb(0 0 0 / .1);
+    transform: scale(1, 0);
+    display: none;
+    transform-origin: top;
+    /* transition: all .5s ease-in-out; */
+    animation: tabsFadeIn .1s;
+}
+
+@keyframes tabsFadeIn {
+    from {
+        transform: scale(1, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+#tabs ul li.active a::before {
+    border: 0;
+}
+
+div.line {
+    display: none;
+}
+
+.myQualifications_info h1 .myQualifications_lineArrow .myQualifications_line {
+    display: none;
+}
+
+.aboutMe .aboutMe_info h1 .aboutMe_lineArrow .aboutMe_line {
+    display: none;
+}
+
+.aboutMe .aboutMe_info h1,
+.myQualifications_info h1 {
+    text-decoration: overline underline;
+    background: #000;
+    color: white;
+}
+
+#menu_toggle {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    top: 0;
+    right: 1.2rem;
+    cursor: pointer;
+}
+
+#menu_toggle .menu_toggle_lines {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle {
+    height: 2px;
+    width: 30px;
+    background-color: black;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle::before,
+#menu_toggle .menu_toggle_lines .menuToggle::after {
+    content: '';
+    height: inherit;
+    width: inherit;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .1s ease-in;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.menuToggle::before {
+    top: 32%;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle::after {
+    top: 68%;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.open {
+    background-color: transparent;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.open::before {
+    transform: rotate(45deg) translate(-7px, 16px);
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.open::after {
+    transform: rotate(-45deg) translate(-4px, -20px);
+}
+
+.menuTitle {
+    font-family: var(--secondary-font-family);
+    padding: 2px 8px;
+    background-color: grey;
+    border-radius: 100px;
+    font-size: .7rem;
+    position: absolute;
+    top: 95%;
+    color: white;
+    display: none;
+}
+
+.menuTitle::before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-bottom-color: grey;
+    position: absolute;
+    left: 50%;
+    top: -27%;
+    transform: translate(-50%, -50%);
+}
+
+#menu_toggle .menu_toggle_lines:hover .menuTitle {
+    display: block;
+}
+
+#main_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_body .typeWriter {
+    height: 80vh;
+}
+
+.sideImg {
+    display: none;
+}
+
+.aboutMe .aboutMe_sideImg img {
+    width: 100%;
+}
+
+footer.upper_footer {
+    flex-flow: column wrap;
+}
+
+footer.upper_footer .about {
+    width: 100%;
+    padding: 3rem;
+}
+
+footer.upper_footer .about h1 {
+    margin-bottom: 2rem;
+}
+
+footer.upper_footer .about .copy {
+    display: none;
+}
+
+footer.upper_footer .contactMe .contactMe-info .copy2 {
+    display: flex;
+}
+
+footer.upper_footer .contactMe {
+    width: 100%;
+    padding: 3rem;
+}
+
+footer.upper_footer .contactMe h1 {
+    text-align: left;
+    width: 100%;
+}
+
+footer.upper_footer .contactMe .contactMe_info {
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    footer.upper_footer .contactMe .contactMe-info img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 11px;
+    }
+    #goTop .goTop::before {
+        top: -65%;
+        /* border: 6px solid transparent;
+        border-bottom-color: black; */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 10px;
+    }
+    #goTop .goTop::before {
+        top: -68%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 9px;
+    }
+    section#logo {
+        padding-left: 10px;
+    }
+    #menu_toggle {
+        right: .1rem;
+    }
+    #goTop .goTop::before {
+        top: -75%;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle {
+        width: 25px;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle.menuToggle::before {
+        top: 35%;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle::after {
+        top: 63%;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle.open::before {
+        transform: rotate(45deg) translate(-7px, 10px);
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle.open::after {
+        transform: rotate(-45deg) translate(0px, -17px);
+    }
+}
