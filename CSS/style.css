@@ -11,7 +11,9 @@
     --type-writer: 'Source Code Pro', monospace;
     --secondary-font-family: 'Roboto', sans-serif;
     --primary-white: #f9f9ff;
-    --primary-brown: #9f6243;
+    /* --primary-brown: #9f6243; */
+    --primary-brown: #092744;
+    --primary-black: #2a2d34;
 }
 
 html {
@@ -27,6 +29,12 @@ body {
 /*============================
     Reusable codes start
  =============================*/
+
+hr {
+    background-color: var(--primary-brown);
+    height: .5px;
+    opacity: .9;
+}
 
 h2 {
     font-family: var(--primary-font-family);
@@ -191,7 +199,6 @@ section#tabs .line {
 
 #main_body {
     width: 100vw;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background-color: var(--primary-white);
@@ -325,13 +332,20 @@ section#tabs .line {
 }
 
 #goTop {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-brown);
     position: fixed;
     cursor: pointer;
     bottom: 2rem;
     right: 1.5rem;
     z-index: 1;
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
     animation: fadeIn-goTop 1s, moving 2s infinite;
     display: none;
 }
@@ -348,40 +362,19 @@ section#tabs .line {
 @keyframes moving {
     0% {
         bottom: 2rem;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
     50% {
         bottom: 1.8rem;
+        border-radius: 76% 24% 70% 30% / 72% 69% 31% 28%;
+    }
+    80% {
+        border-radius: 76% 24% 19% 81% / 26% 73% 27% 74%;
     }
     100% {
         bottom: 2rem;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
-}
-
-#goTop .goTop {
-    font-family: var(--secondary-font-family);
-    font-size: 1rem;
-    background-color: gray;
-    color: white;
-    height: inherit;
-    width: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border: 3px solid #233422;
-    border-radius: 50%;
-    box-shadow: 0 2px 10px 2px rgb(0 0 0 / .5);
-    position: relative;
-}
-
-#goTop .goTop::before {
-    content: '';
-    height: 0;
-    width: 0;
-    border: 8px solid transparent;
-    border-bottom-color: #233422;
-    position: absolute;
-    top: -40%;
 }
 
 .aboutMe {
@@ -421,9 +414,13 @@ section#tabs .line {
 }
 
 .aboutMe .aboutMe_sideImg img {
-    /* height: 22.5rem; */
+    box-shadow: -20px -20px 0 0 var(--primary-brown);
     width: 30rem;
     aspect-ratio: 16 / 11;
+}
+
+.aboutMe .aboutMe_sideImg img.up-img {
+    box-shadow: 20px 20px 0 0 var(--primary-brown);
 }
 
 .myQualifications {
@@ -658,6 +655,11 @@ section#tabs .line {
     height: 10rem;
 }
 
+.learnings img.strategy {
+    margin-top: -4rem;
+    width: 90vw;
+}
+
 .learnings .learning .learning_info {
     font-family: var(--secondary-font-family);
     padding: 2px 5px;
@@ -704,7 +706,7 @@ section#tabs .line {
 
 footer.upper_footer {
     width: 100vw;
-    background-color: #121212;
+    background-color: var(--primary-black);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -722,7 +724,7 @@ footer.upper_footer .about p {
     font-family: var(--secondary-font-family);
     font-size: 1rem;
     line-height: 1.5rem;
-    opacity: .8;
+    opacity: .9;
     text-align: justify;
 }
 
@@ -755,20 +757,16 @@ footer.upper_footer .contactMe .contactMe_info {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    /* gap: 1rem */
 }
 
 footer.upper_footer .contactMe h1 {
     font-family: var(--primary-font-family);
-    /* font-family: var(--secondary-font-family); */
     font-size: 1.8rem;
     text-align: center;
     width: 60%;
-    /* padding-left: 1.5rem; */
 }
 
 footer.upper_footer .contactMe .contactMe-info {
-    /* width: 50%; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -787,7 +785,6 @@ footer.upper_footer .contactMe .contactMe-info a {
 }
 
 footer.upper_footer .contactMe .contactMe-info a:hover {
-    /* color: rgba(0, 0, 0, .5); */
     opacity: .7;
 }
 
@@ -895,7 +892,7 @@ footer.lower_footer p a:hover {
         width: auto;
     }
     #myExperiences .languages {
-        width: 80%;
+        width: 90%;
     }
     #myExperiences p {
         margin-bottom: .5rem;
@@ -903,14 +900,8 @@ footer.lower_footer p a:hover {
 }
 
 @media screen and (max-width: 914px) {
-    .aboutMe .aboutMe_sideImg {
-        width: 90%;
-    }
     .aboutMe .aboutMe_sideImg img {
         width: 70%;
-    }
-    .aboutMe .aboutMe_info {
-        width: 90%;
     }
 }
 
@@ -933,9 +924,6 @@ footer.lower_footer p a:hover {
 }
 
 @media screen and (max-width: 500px) {
-    html {
-        font-size: 12px;
-    }
     footer.upper_footer .contactMe .contactMe_info {
         flex-flow: column wrap;
     }
@@ -955,23 +943,8 @@ footer.lower_footer p a:hover {
 }
 
 @media screen and (max-width: 400px) {
-    html {
-        font-size: 11px;
-    }
     footer.lower_footer p a {
         padding: 0 .1rem;
         font-size: .5rem;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    html {
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 200px) {
-    html {
-        font-size: 9px;
     }
 }

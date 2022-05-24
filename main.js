@@ -50,7 +50,7 @@ window.onscroll = function() {
 
 function GoTop() {
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-        document.getElementById('goTop').style.display = 'block';
+        document.getElementById('goTop').style.display = 'flex';
 
     } else {
         document.getElementById('goTop').style.display = 'none';

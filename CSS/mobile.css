@@ -9,8 +9,12 @@ nav {
     height: 50px;
 }
 
-#goTop .goTop::before {
-    top: -53%;
+.adhikari {
+    display: none;
+}
+
+#main_body {
+    height: 100vh;
 }
 
 section#logo {
@@ -62,6 +66,14 @@ div.line {
     text-decoration: overline underline;
     background: #000;
     color: white;
+}
+
+.aboutMe .aboutMe_sideImg img {
+    box-shadow: -10px -10px 0 0 var(--primary-brown);
+}
+
+.aboutMe .aboutMe_sideImg img.up-img {
+    box-shadow: 10px 10px 0 0 var(--primary-brown);
 }
 
 #menu_toggle {
@@ -205,31 +217,14 @@ footer.upper_footer .contactMe .contactMe_info {
     footer.upper_footer .contactMe .contactMe-info img {
         display: none;
     }
-}
-
-@media screen and (max-width: 500px) {
     html {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    html {
-        font-size: 11px;
-    }
-    #goTop .goTop::before {
-        top: -65%;
-        /* border: 6px solid transparent;
-        border-bottom-color: black; */
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: 350px) {
     html {
-        font-size: 10px;
-    }
-    #goTop .goTop::before {
-        top: -68%;
+        font-size: 12px;
     }
 }
 
@@ -242,9 +237,6 @@ footer.upper_footer .contactMe .contactMe_info {
     }
     #menu_toggle {
         right: .1rem;
-    }
-    #goTop .goTop::before {
-        top: -75%;
     }
     #menu_toggle .menu_toggle_lines .menuToggle {
         width: 25px;
