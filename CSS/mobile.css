@@ -163,6 +163,10 @@ div.line {
     width: 100%;
 }
 
+.learnings img.strategy {
+    margin-top: -3rem;
+}
+
 footer.upper_footer {
     flex-flow: column wrap;
 }

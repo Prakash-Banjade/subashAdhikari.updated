@@ -15,7 +15,7 @@
     margin-bottom: 4rem;
     width: fit-content;
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     font-family: var(--primary-font-family);
     font-size: 1.1rem;
 }
@@ -39,6 +39,7 @@
     padding: 0;
     color: var(--primary-theme-color);
     margin-bottom: 1rem;
+    font-weight: 900;
 }
 
 .contactForm p {
@@ -85,14 +86,11 @@
     height: 10rem;
 }
 
-
-/* 
-.form-input {
-    position: relative;
+@media screen and (max-width: 700px) {
+    .contactMe-content {
+        width: 90%;
+    }
+    .contactForm form {
+        width: 100%;
+    }
 }
-
-.form-input::before {
-    content: "*";
-    position: absolute;
-    color: red;
-} */
