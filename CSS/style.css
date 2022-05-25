@@ -11,8 +11,8 @@
     --type-writer: 'Source Code Pro', monospace;
     --secondary-font-family: 'Roboto', sans-serif;
     --primary-white: #f9f9ff;
-    /* --primary-brown: #9f6243; */
-    --primary-brown: #092744;
+    --primary-theme-color: #00001f;
+    /* --primary-theme-color: #092744; */
     --primary-black: #2a2d34;
 }
 
@@ -31,7 +31,7 @@ body {
  =============================*/
 
 hr {
-    background-color: var(--primary-brown);
+    background-color: var(--primary-theme-color);
     height: .5px;
     opacity: .9;
 }
@@ -52,7 +52,7 @@ h2::before {
     position: absolute;
     height: 4px;
     width: 120px;
-    background-color: var(--primary-brown);
+    background-color: var(--primary-theme-color);
     bottom: -20%;
 }
 
@@ -61,7 +61,7 @@ h2::after {
     position: absolute;
     height: 0;
     border: 10px solid transparent;
-    border-left-color: var(--primary-brown);
+    border-left-color: var(--primary-theme-color);
     bottom: calc(-20% - 8px);
     left: 115px;
 }
@@ -81,7 +81,7 @@ h3.bottomContent::after {
     font-size: 1rem;
     font-family: var(--primary-font-family);
     font-weight: 400;
-    color: var(--primary-brown);
+    color: var(--primary-theme-color);
     padding: 0 1rem;
     position: absolute;
     background-color: white;
@@ -90,7 +90,8 @@ h3.bottomContent::after {
     transform: translate(-50%, 100%);
 }
 
-h3.bottomContent::before {
+
+/* h3.bottomContent::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -98,8 +99,8 @@ h3.bottomContent::before {
     transform: translate(-50%, 1030%);
     height: 3px;
     width: 200px;
-    background-color: var(--primary-brown);
-}
+    background-color: var(--primary-theme-color);
+} */
 
 
 /* ===========================
@@ -251,12 +252,12 @@ section#tabs .line {
     font-family: var(--secondary-font-family);
     font-weight: 900;
     font-size: 4rem;
-    color: var(--primary-brown);
+    color: var(--primary-theme-color);
 }
 
 #main_body .sideInfo .main-body-btns .main-body-btn {
     border: none;
-    background-color: var(--primary-brown);
+    background-color: var(--primary-theme-color);
     color: white;
     font-family: var(--primary-font-family);
     font-weight: 400;
@@ -338,14 +339,14 @@ section#tabs .line {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: var(--primary-brown);
+    background-color: var(--primary-theme-color);
     position: fixed;
     cursor: pointer;
     bottom: 2rem;
     right: 1.5rem;
     z-index: 1;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3.8rem;
+    width: 3.8rem;
     animation: fadeIn-goTop 1s, moving 2s infinite;
     display: none;
 }
@@ -414,13 +415,13 @@ section#tabs .line {
 }
 
 .aboutMe .aboutMe_sideImg img {
-    box-shadow: -20px -20px 0 0 var(--primary-brown);
+    box-shadow: -20px -20px 0 0 var(--primary-theme-color);
     width: 30rem;
     aspect-ratio: 16 / 11;
 }
 
 .aboutMe .aboutMe_sideImg img.up-img {
-    box-shadow: 20px 20px 0 0 var(--primary-brown);
+    box-shadow: 20px 20px 0 0 var(--primary-theme-color);
 }
 
 .myQualifications {
@@ -519,7 +520,7 @@ section#tabs .line {
 .bar_c::before {
     content: '';
     height: inherit;
-    background-color: var(--primary-brown);
+    background-color: var(--primary-theme-color);
     position: absolute;
 }
 
@@ -547,7 +548,7 @@ section#tabs .line {
     font-style: italic;
     font-size: 1rem;
     font-family: var(--secondary-font-family);
-    background-color: var(--primary-brown);
+    background-color: var(--primary-theme-color);
     padding: 2px 5px;
     border-radius: 4px;
     color: white;
@@ -587,7 +588,7 @@ section#tabs .line {
     height: 0;
     width: 0;
     border: 10px solid transparent;
-    border-bottom-color: var(--primary-brown);
+    border-bottom-color: var(--primary-theme-color);
     position: absolute;
     top: 0;
 }
@@ -840,7 +841,7 @@ footer.upper_footer .contactMe .contactMe-form input {
 }
 
 footer.upper_footer .contactMe .contactMe-form input:focus {
-    outline: 3px solid var(--primary-brown);
+    outline: 3px solid var(--primary-theme-color);
 }
 
 footer.upper_footer .contactMe .contactMe-form textarea {
@@ -863,7 +864,7 @@ footer.upper_footer .contactMe .contactMe-form button {
 
 footer.lower_footer {
     width: 100vw;
-    background-color: black;
+    background-color: #00000f;
     padding: .5rem;
 }
 

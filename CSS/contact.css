@@ -1,0 +1,98 @@
+.contactMe {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactMe-content {
+    width: 80%;
+}
+
+.contactMe .goBack {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    font-family: var(--primary-font-family);
+    font-size: 1.1rem;
+}
+
+.contactMe .goBack:hover {
+    color: #0d6efd;
+    cursor: pointer;
+}
+
+.contactMe .goBack i {
+    display: flex;
+    align-items: center;
+}
+
+.contactMe .goBack .backTxt {
+    margin: 0;
+}
+
+.contact-head {
+    text-align: left;
+    padding: 0;
+    color: var(--primary-theme-color);
+    margin-bottom: 1rem;
+}
+
+.contactForm p {
+    font-family: var(--secondary-font-family);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: .9;
+    letter-spacing: 1px;
+}
+
+.contactForm form {
+    font-family: var(--secondary-font-family);
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    border: 1px solid rgb(0 0 0 / .2);
+    border-radius: 5px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.contactForm form .form-name {
+    flex: 1 1 8rem;
+}
+
+.contactForm form .form-mail {
+    flex: 1 1 8rem;
+}
+
+.contactForm form .form-phNumber {
+    flex: 1 1 8rem;
+}
+
+.contactForm form .form-subject {
+    flex: 1 1 100%;
+}
+
+.contactForm form .form-message {
+    flex: 1 1 100%;
+}
+
+.contactForm form .form-message input {
+    height: 10rem;
+}
+
+
+/* 
+.form-input {
+    position: relative;
+}
+
+.form-input::before {
+    content: "*";
+    position: absolute;
+    color: red;
+} */

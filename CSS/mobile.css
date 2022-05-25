@@ -53,27 +53,12 @@ div.line {
     display: none;
 }
 
-.myQualifications_info h1 .myQualifications_lineArrow .myQualifications_line {
-    display: none;
-}
-
-.aboutMe .aboutMe_info h1 .aboutMe_lineArrow .aboutMe_line {
-    display: none;
-}
-
-.aboutMe .aboutMe_info h1,
-.myQualifications_info h1 {
-    text-decoration: overline underline;
-    background: #000;
-    color: white;
-}
-
 .aboutMe .aboutMe_sideImg img {
-    box-shadow: -10px -10px 0 0 var(--primary-brown);
+    box-shadow: -10px -10px 0 0 var(--primary-theme-color);
 }
 
 .aboutMe .aboutMe_sideImg img.up-img {
-    box-shadow: 10px 10px 0 0 var(--primary-brown);
+    box-shadow: 10px 10px 0 0 var(--primary-theme-color);
 }
 
 #menu_toggle {
@@ -187,10 +172,6 @@ footer.upper_footer .about {
     padding: 3rem;
 }
 
-footer.upper_footer .about h1 {
-    margin-bottom: 2rem;
-}
-
 footer.upper_footer .about .copy {
     display: none;
 }
@@ -202,11 +183,6 @@ footer.upper_footer .contactMe .contactMe-info .copy2 {
 footer.upper_footer .contactMe {
     width: 100%;
     padding: 3rem;
-}
-
-footer.upper_footer .contactMe h1 {
-    text-align: left;
-    width: 100%;
 }
 
 footer.upper_footer .contactMe .contactMe_info {
