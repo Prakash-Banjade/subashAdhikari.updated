@@ -167,14 +167,11 @@ div.line {
     margin-top: -3rem;
 }
 
+
+/* 
 footer.upper_footer {
     flex-flow: column wrap;
-}
-
-footer.upper_footer .about {
-    width: 100%;
-    padding: 3rem;
-}
+} */
 
 footer.upper_footer .about .copy {
     display: none;
@@ -182,11 +179,6 @@ footer.upper_footer .about .copy {
 
 footer.upper_footer .contactMe .contactMe-info .copy2 {
     display: flex;
-}
-
-footer.upper_footer .contactMe {
-    width: 100%;
-    padding: 3rem;
 }
 
 footer.upper_footer .contactMe .contactMe_info {
