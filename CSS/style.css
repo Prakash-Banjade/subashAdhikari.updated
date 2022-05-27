@@ -160,6 +160,10 @@ p {
     line-height: 1.3rem;
 }
 
+ul.ulol {
+    padding-left: 2rem;
+}
+
 
 /* ===========================
     Reusable codes ends
@@ -359,6 +363,26 @@ section#tabs .line {
     height: 30%;
     width: 90%;
     background-color: black;
+}
+
+#main_body .sideInfo .main-body-socialMedia-btns {
+    display: flex;
+    gap: 2rem;
+    font-size: 2.5rem;
+    /* margin-top: 1.5rem; */
+}
+
+#main_body .sideInfo .main-body-socialMedia-btns a {
+    color: var(--primary-black);
+    text-decoration: none;
+}
+
+#main_body .sideInfo .main-body-socialMedia-btns a.facebook-icon {
+    color: #38529a;
+}
+
+#main_body .sideInfo .main-body-socialMedia-btns a:hover {
+    opacity: .8;
 }
 
 #main_body .sideImg {

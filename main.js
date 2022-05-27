@@ -82,3 +82,9 @@ for (x of btns) {
     })
 
 }
+
+// when clicked on contact btn at main section
+
+document.getElementById('contactMe-btn').addEventListener('click', function() {
+    location.href = 'contact.html';
+})

@@ -24,12 +24,24 @@
 </head>
 
 <body>
-    <section class="contactMe">
+    <div class="contact-menu-toggle" id="contactMenuToggle">
+        <i class="fa-solid fa-bars-staggered close" id="contactMenuToggle" title="Menu"></i>
+        <ul id="contactMenuList">
+            <li><a href="index.html">home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Qualification</a></li>
+            <li><a href="index.html">Experiences</a></li>
+        </ul>
+    </div>
+    <section class="contact-main-section">
         <div class="contactMe-content">
 
             <div class="goBack" id="goBack">
-                <i class="fa-solid fa-long-arrow-left backIcon"></i>
-                <p class="backTxt">Back</p>
+                <button>
+
+                    <i class="fa-solid fa-long-arrow-left backIcon"></i>
+                    <p class="backTxt">Back</p>
+                </button>
             </div>
 
             <div class="contactForm">
@@ -49,7 +61,7 @@
                     </div>
 
                     <div class="form-floating form-phNumber form-input">
-                        <input type="number" name="Phone no." class="form-control" id="floatingInput" placeholder="Your Ph number" autocomplete="off">
+                        <input type="number" name="Phone no." class="form-control" id="floatingInput" placeholder="Your Ph number" autocomplete="off" min="10" max="14">
                         <label for="floatingInput">Phone no.</label>
                     </div>
                     <div class="form-floating form-subject form-input">
@@ -58,7 +70,7 @@
                     </div>
                     <div class="form-message">
                         <label for="message" class="form-label"><span style="margin-left: 5px;">Message <span style="color: red;">*</span></span></label>
-                        <textarea name="Message" class="form-control" id="message" rows="3" required autocomplete="off"></textarea>
+                        <textarea name="Message" class="form-control" id="message" rows="3" minlength="20" required autocomplete="off"></textarea>
                     </div>
                     <button class="btn btn-primary" type="submit">Send</button>
                 </form>
@@ -86,8 +98,8 @@
             <h3>Contact Me</h3>
             <div class="contactMe_info">
                 <div class="contactMe-info">
-                    <address>Nayagaun Chowk, Rupandehi, Nepal</address>
-                    <a href="tel:+977 9811111111" class="contact-link">+977 9811111111</a>
+                    <address><em>Nayagaun Chowk, Rupandehi, Nepal</em></address>
+                    <a href="tel:+977 9866142701" class="contact-link">+977 9866142701</a>
                     <a href="iamnepali213@gmail.com" class="contact-link">iamnepali213@gmail.com</a>
                     <div class="icons">
                         <a href="https://www.facebook.com/subash.adhikari.125323">
@@ -126,6 +138,21 @@
     <script>
         document.getElementById('goBack').addEventListener('click', function() {
             location.href = 'index.html';
+        })
+
+        document.getElementById('contactMenuToggle').addEventListener('click', function(e) {
+            console.log('true')
+            if (e.target.classList.contains('close')) {
+                document.getElementById('contactMenuList').style.transform = 'scale(1)';
+                e.target.classList.add('open');
+                e.target.classList.remove('close');
+                e.target.classList.replace('fa-bars-staggered', 'fa-xmark')
+            } else {
+                document.getElementById('contactMenuList').style.transform = 'scale(0)';
+                e.target.classList.remove('open');
+                e.target.classList.add('close');
+                e.target.classList.replace('fa-xmark', 'fa-bars-staggered')
+            }
         })
     </script>
 </body>
