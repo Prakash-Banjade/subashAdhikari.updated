@@ -10,10 +10,13 @@
     --primary-font-family: 'Poppins', sans-serif;
     --type-writer: 'Source Code Pro', monospace;
     --secondary-font-family: 'Roboto', sans-serif;
-    --primary-white: #f9f9ff;
+    /* --primary-white: #f9f9ff; */
+    --primary-white: #eee;
     --primary-theme-color: #00001f;
     /* --primary-theme-color: #092744; */
     --primary-black: #2a2d34;
+    --uni-section-padding: 2rem;
+    --uni-section-margin: 2rem;
 }
 
 html {
@@ -23,6 +26,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: var(--primary-white);
 }
 
 
@@ -30,24 +34,39 @@ body {
     Reusable codes start
  =============================*/
 
+section.body-section {
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    padding: var(--uni-section-padding);
+    margin: var(--uni-section-margin) auto;
+}
+
 hr {
     background-color: var(--primary-theme-color);
+    border: none;
     height: .5px;
-    opacity: .9;
+    opacity: .5;
 }
 
 h2 {
     font-family: var(--primary-font-family);
     font-size: 2.3rem;
+    color: var(--primary-theme-color);
     font-weight: 900;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 2rem;
     padding-bottom: .5rem;
     position: relative;
 }
 
-h2::before {
+h2.bottom-content {
+    text-align: center;
+}
+
+h2.bottom-line {
+    margin-bottom: 3rem;
+}
+
+h2.bottom-line::before {
     content: "";
     position: absolute;
     height: 4px;
@@ -56,7 +75,7 @@ h2::before {
     bottom: -20%;
 }
 
-h2::after {
+h2.bottom-line::after {
     content: "";
     position: absolute;
     height: 0;
@@ -66,17 +85,7 @@ h2::after {
     left: 115px;
 }
 
-h3 {
-    font-family: var(--secondary-font-family);
-    font-size: 2rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 5px 10px;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-h3.bottomContent::after {
+h2.bottom-content::after {
     content: "programming life";
     font-size: 1rem;
     font-family: var(--primary-font-family);
@@ -90,17 +99,29 @@ h3.bottomContent::after {
     transform: translate(-50%, 160%);
 }
 
+h3 {
+    font-family: var(--primary-font-family);
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 5px 10px;
+    margin-bottom: 2rem;
+    position: relative;
+}
 
-/* h3.bottomContent::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 1030%);
-    height: 3px;
-    width: 200px;
-    background-color: var(--primary-theme-color);
-} */
+h3.small-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: .9rem;
+    font-family: var(--secondary-font-family);
+    letter-spacing: .5px;
+}
 
 
 /* ===========================
@@ -378,87 +399,64 @@ section#tabs .line {
     }
 }
 
-.aboutMe {
-    margin-top: 10rem;
-    margin-bottom: 2rem;
-    width: 100vw;
+section.main-section {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
 }
 
-.aboutMe .aboutMe_info {
-    width: 35rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-flow: column wrap;
-    padding: 2rem;
-    position: relative;
-    /* border: 2px solid red; */
+.main-section>* {
+    flex: 1 1 25rem;
 }
 
-.aboutMe .aboutMe_info p {
-    font-family: var(--secondary-font-family);
-    font-size: 1rem;
-    line-height: 2rem;
-    text-align: justify;
-    opacity: .9;
-}
-
-.aboutMe .aboutMe_sideImg {
+.main-section .sideImg {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
 }
 
-.aboutMe .aboutMe_sideImg img {
-    box-shadow: -20px -20px 0 0 var(--primary-theme-color);
-    width: 30rem;
-    aspect-ratio: 16 / 11;
+.main-section .sideImg img {
+    width: 80%;
+    aspect-ratio: 16 / 10;
 }
 
-.aboutMe .aboutMe_sideImg img.up-img {
-    box-shadow: 20px 20px 0 0 var(--primary-theme-color);
-}
-
-.myQualifications {
-    margin-top: 2rem;
-}
-
-.myQualifications_info {
+.myQualifications .main-section-info article {
     display: flex;
     align-items: center;
-    /* text-align: center; */
-    flex-flow: column wrap;
-    padding: 3rem 0 3rem 5rem;
-    position: relative;
-    padding: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0;
 }
 
-.myQualifications_info .myQualificationsUl {
-    width: 100%;
-    margin-left: 3rem;
-}
-
-.myQualifications_info .myQualificationsUl li {
-    list-style: circle;
-    font-family: var(--secondary-font-family);
-    font-size: 1.1rem;
-    text-align: left;
-    margin: .8rem 0;
-}
-
-.myQualifications_info .myQualificationsUl li span {
+.myQualifications .main-section-info article h3 a {
+    text-decoration: none;
+    color: black;
     font-size: .9rem;
-    color: grey;
-    font-style: italic;
+    opacity: .8;
 }
 
-#myExperiences {
-    margin-top: 5rem;
+.myQualifications .main-section-info article p {
+    text-align: right;
+}
+
+.myQualifications .main-section-info article p span {
+    color: red;
+}
+
+.myQualifications .main-section-info article p span.completed {
+    color: green;
+}
+
+.myQualifications .main-section-info hr {
+    opacity: .2;
+}
+
+section#myExperiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
 }
 
 #myExperiences .myExperiences_info {
@@ -613,15 +611,11 @@ section#tabs .line {
     left: calc(60% - 10px);
 }
 
-.learnings {
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-    width: 100vw;
+section.learnings {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    flex-flow: column wrap;
 }
 
 .learnings .learning_container {
@@ -658,7 +652,7 @@ section#tabs .line {
 
 .learnings img.strategy {
     margin-top: -4rem;
-    width: 90vw;
+    width: 90%;
 }
 
 .learnings .learning .learning_info {

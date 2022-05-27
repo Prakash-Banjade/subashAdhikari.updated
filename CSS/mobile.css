@@ -53,14 +53,6 @@ div.line {
     display: none;
 }
 
-.aboutMe .aboutMe_sideImg img {
-    box-shadow: -10px -10px 0 0 var(--primary-theme-color);
-}
-
-.aboutMe .aboutMe_sideImg img.up-img {
-    box-shadow: 10px 10px 0 0 var(--primary-theme-color);
-}
-
 #menu_toggle {
     position: absolute;
     height: 50px;
@@ -155,23 +147,9 @@ div.line {
     height: 80vh;
 }
 
-.sideImg {
-    display: none;
-}
-
-.aboutMe .aboutMe_sideImg img {
-    width: 100%;
-}
-
 .learnings img.strategy {
     margin-top: -3rem;
 }
-
-
-/* 
-footer.upper_footer {
-    flex-flow: column wrap;
-} */
 
 footer.upper_footer .about .copy {
     display: none;
