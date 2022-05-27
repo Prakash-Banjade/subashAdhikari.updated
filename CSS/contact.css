@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 5rem;
 }
 
 .contactMe-content {
@@ -40,6 +41,7 @@
     color: var(--primary-theme-color);
     margin-bottom: 1rem;
     font-weight: 900;
+    font-size: 2.3rem;
 }
 
 .contactForm p {
@@ -84,6 +86,24 @@
 
 .contactForm form .form-message input {
     height: 10rem;
+}
+
+footer.lower_footer p {
+    margin: 0;
+}
+
+.footer-section h3 {
+    font-family: var(--primary-font-family);
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 5px 10px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.footer-section .contactMe-info p {
+    margin: 0;
 }
 
 @media screen and (max-width: 700px) {

@@ -65,7 +65,7 @@ article h3 a {
     text-decoration: none;
     color: black;
     font-size: .9rem;
-    opacity: .8;
+    opacity: .6;
 }
 
 article p {
@@ -92,10 +92,6 @@ h2 {
     position: relative;
 }
 
-h2.bottom-content {
-    text-align: center;
-}
-
 h2.bottom-line {
     margin-bottom: 3rem;
 }
@@ -119,18 +115,23 @@ h2.bottom-line::after {
     left: 115px;
 }
 
+h2.bottom-content {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h2.bottom-content::after {
-    content: "programming life";
+    content: "--- programming life ---";
     font-size: 1rem;
     font-family: var(--primary-font-family);
     font-weight: 400;
     color: var(--primary-theme-color);
-    padding: 0 1rem;
     position: absolute;
     background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 160%);
+    bottom: -25%;
 }
 
 h3 {
@@ -156,6 +157,7 @@ p {
     font-size: .9rem;
     font-family: var(--secondary-font-family);
     letter-spacing: .5px;
+    line-height: 1.3rem;
 }
 
 
@@ -389,49 +391,21 @@ section#tabs .line {
 }
 
 #goTop {
+    height: 6rem;
+    width: 5rem;
     font-size: 1.5rem;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     background-color: var(--primary-theme-color);
     position: fixed;
+    bottom: 0;
+    right: 0;
     cursor: pointer;
-    bottom: 2rem;
-    right: 1.5rem;
     z-index: 1;
-    height: 3.8rem;
-    width: 3.8rem;
-    animation: fadeIn-goTop 1s, moving 2s infinite;
+    opacity: .4;
     display: none;
-}
-
-@keyframes fadeIn-goTop {
-    form {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes moving {
-    0% {
-        bottom: 2rem;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-    50% {
-        bottom: 1.8rem;
-        border-radius: 76% 24% 70% 30% / 72% 69% 31% 28%;
-    }
-    80% {
-        border-radius: 76% 24% 19% 81% / 26% 73% 27% 74%;
-    }
-    100% {
-        bottom: 2rem;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
 }
 
 section.main-section {
@@ -452,7 +426,7 @@ section.main-section {
 }
 
 .main-section .sideImg img {
-    width: 80%;
+    width: 100%;
     aspect-ratio: 16 / 10;
 }
 
@@ -589,20 +563,21 @@ section.learnings {
 
 .learnings .learning_container {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2rem;
+    margin-top: 3.5rem;
 }
 
-.learnings header h3.bottomContent::after {
-    content: 'learning life';
+.learnings header h2.bottom-content::after {
+    content: '--- learning life ---';
 }
 
 .learnings .learning {
     display: flex;
     height: 20rem;
     width: 20rem;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 3rem;
@@ -689,7 +664,6 @@ footer.upper_footer h3 {
 }
 
 footer.upper_footer .about p {
-    line-height: 1.5rem;
     opacity: .9;
 }
 
