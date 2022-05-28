@@ -333,13 +333,13 @@ section#tabs .line {
     transition: transform .15s ease;
 }
 
-#main_body .sideInfo .main-body-btns .main-body-btn:hover,
-#main_body .sideInfo .main-body-btns .main-body-btn:active {
+.main-body-btn:hover,
+.main-body-btn:active {
     opacity: 1;
     transform: translateY(-10px)
 }
 
-#main_body .sideInfo .main-body-btns .main-body-btn::after {
+.main-body-btn::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -351,7 +351,7 @@ section#tabs .line {
     transition: opacity .15s ease-in;
 }
 
-#main_body .sideInfo .main-body-btns .main-body-btn.hover::after {
+.main-body-btn.hover::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -369,7 +369,6 @@ section#tabs .line {
     display: flex;
     gap: 2rem;
     font-size: 2.5rem;
-    /* margin-top: 1.5rem; */
 }
 
 #main_body .sideInfo .main-body-socialMedia-btns a {
@@ -452,6 +451,7 @@ section.main-section {
 .main-section .sideImg img {
     width: 100%;
     aspect-ratio: 16 / 10;
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / .1);
 }
 
 .myExperiences .myExperiences-info {
@@ -665,6 +665,74 @@ section.learnings {
         opacity: 0;
         top: 70%;
     }
+}
+
+.hireMe-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    background: linear-gradient(to left, rgb(0 0 0 / .7), rgb(0 0 0 / .7)), url('../photos/freelancer.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--primary-white);
+}
+
+.hireMe-section h2 {
+    font-size: 3rem;
+    margin-bottom: .8rem;
+    padding: 0 .8rem;
+    color: var(--primary-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+.hireMe-section h2 span.my-jobs {
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: .8;
+    height: fit-content;
+    width: fit-content;
+}
+
+.hireMe-section h2 span.my-name {
+    color: greenyellow;
+    text-align: center;
+}
+
+.hireMe-section h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.hireMe-section h3 span {
+    color: greenyellow;
+}
+
+.hireMe-section p {
+    font-family: var(--primary-font-family);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hireMe-section button.hireMe-btn {
+    padding: 8px 18px;
+    text-transform: uppercase;
+    font-family: var(--primary-font-family);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-theme-color);
+    color: white;
+    transition: transform .15s ease;
 }
 
 footer.upper_footer {
